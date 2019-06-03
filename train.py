@@ -24,7 +24,7 @@ class CycleGANTraining:
                  output_B_dir,
                  restart_training_at=None):
         self.start_epoch = 0
-        self.num_epochs = 600
+        self.num_epochs = 500
         self.mini_batch_size = 1
         self.dataset_A = self.loadPickleFile(coded_sps_A_norm)
         self.dataset_B = self.loadPickleFile(coded_sps_B_norm)
