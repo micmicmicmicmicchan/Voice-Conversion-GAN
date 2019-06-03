@@ -236,7 +236,7 @@ class CycleGANTraining:
             print("Epoch: {} Generator Loss: {:.4f} Discriminator Loss: {}, Time: {:.2f}\n\n".format(
                 epoch, generator_loss.item(), d_loss.item(), end_time - start_time_epoch))
 
-            if epoch % 100 == 0 and epoch != 0:
+            if epoch % 10 == 0 and epoch != 0:
                 # Save the Entire model
                 print("Saving model Checkpoint  ......")
                 store_to_file = "Saving model Checkpoint  ......"
@@ -245,7 +245,7 @@ class CycleGANTraining:
                     self.modelCheckpoint + '_CycleGAN_CheckPoint'))
                 print("Model Saved!")
 
-            if epoch % 100 == 0 and epoch != 0:
+            if epoch % 10 == 0 and epoch != 0:
                 # Validation Set
                 validation_start_time = time.time()
                 self.validation_for_A_dir()
