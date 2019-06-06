@@ -71,9 +71,9 @@ class CycleGANTraining:
         self.start_decay = 200000
 
         self.generator_optimizer = torch.optim.Adam(
-            g_params, lr=self.generator_lr, betas=(0.5, 0.999))
+            g_params, lr=self.generator_lr, betas=(0.5, 0.8))
         self.discriminator_optimizer = torch.optim.Adam(
-            d_params, lr=self.discriminator_lr, betas=(0.5, 0.999))
+            d_params, lr=self.discriminator_lr, betas=(0.5, 0.8))
 
         # To Load save previously saved models
         self.modelCheckpoint = model_checkpoint
