@@ -60,7 +60,7 @@ class CycleGANTraining:
             list(self.discriminator_B.parameters())
 
         # Initial learning rates
-        self.generator_lr = 0.0002
+        self.generator_lr = 0.0010
         self.discriminator_lr = 0.0001
 
         # Learning rate decay
@@ -71,9 +71,9 @@ class CycleGANTraining:
         self.start_decay = 200000
 
         self.generator_optimizer = torch.optim.Adam(
-            g_params, lr=self.generator_lr, betas=(0.5, 0.8))
+            g_params, lr=self.generator_lr, betas=(0.5, 0.999))
         self.discriminator_optimizer = torch.optim.Adam(
-            d_params, lr=self.discriminator_lr, betas=(0.5, 0.8))
+            d_params, lr=self.discriminator_lr, betas=(0.5, 0.999))
 
         # To Load save previously saved models
         self.modelCheckpoint = model_checkpoint
