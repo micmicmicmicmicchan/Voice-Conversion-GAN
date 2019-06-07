@@ -60,7 +60,7 @@ class CycleGANTraining:
             list(self.discriminator_B.parameters())
 
         # Initial learning rates
-        self.generator_lr = 0.0001
+        self.generator_lr = 0.01
         self.discriminator_lr = 0.0001
 
         # Learning rate decay
